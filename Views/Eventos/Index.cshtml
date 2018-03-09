@@ -1,0 +1,69 @@
+﻿@model IEnumerable<BLOGDeportes.Models.Evento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomEvento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiudadEvento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LugarEvento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEvento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Foto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomEvento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiudadEvento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LugarEvento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEvento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Foto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EventoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EventoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EventoID })
+        </td>
+    </tr>
+}
+
+</table>

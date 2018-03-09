@@ -1,0 +1,50 @@
+﻿@model BLOGDeportes.Models.Detalle
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Detalle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.NomCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.NomCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Evento.NomEvento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evento.NomEvento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Distancia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Distancia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDetalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDetalle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DetalleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

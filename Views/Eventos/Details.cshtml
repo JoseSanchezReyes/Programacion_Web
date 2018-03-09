@@ -1,0 +1,74 @@
+﻿@model BLOGDeportes.Models.Evento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Evento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomEvento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomEvento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiudadEvento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiudadEvento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LugarEvento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LugarEvento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEvento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEvento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Foto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Foto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EventoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

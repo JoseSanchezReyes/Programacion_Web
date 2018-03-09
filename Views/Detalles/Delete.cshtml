@@ -1,0 +1,56 @@
+﻿@model BLOGDeportes.Models.Detalle
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Detalle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.NomCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.NomCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Evento.NomEvento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evento.NomEvento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Distancia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Distancia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDetalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDetalle)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
